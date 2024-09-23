@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Modelo de Tradução Especializado em Documentações Técnicas (en-pt)
 
 ## ⚠️ Aviso
