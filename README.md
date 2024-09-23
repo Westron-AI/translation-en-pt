@@ -6,14 +6,14 @@
 
 ## Sobre 
 
-Este é um modelo de tradução automática para tradução de inglês (en) para português (pt),   **finetuned** com dados da **Revista FAPESP** e **documentações técnicas de diversas fontes**. Os dados da FAPESP foram obtidos do seguinte site: [FAPESP Corpora](http://www.nilc.icmc.usp.br/nilc/tools/Fapesp%20Corpora.htm). Dados de mais de 10 mil páginas de documentações técnicas foram coletados pelo autor seguindo as diretrizes respectivas de cada fonte.
+Este é um modelo de tradução automática para tradução de inglês (en) para português (pt),   **fine-tuned** com dados da **Revista FAPESP** e **documentações técnicas de diversas fontes**. Os dados da FAPESP foram obtidos de [FAPESP Corpora](http://www.nilc.icmc.usp.br/nilc/tools/Fapesp%20Corpora.htm). Os dados de documentações técnicas, abrangendo mais de 10 mil páginas, foram coletados pelo autor em conformidade com as diretrizes específicas de cada fonte.
 
 ## Modelo Original
 
 [Helsinki-NLP/opus-mt-tc-big-en-pt](https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-pt)
 
 ## Modelo Fine-tuned Especializado em Documentações Técnicas
-[westronai/translation-en-pt](https://huggingface.co/westronai/translation-pt-en-opus-documentation-finetuned)
+[westronai/translation-en-pt](https://huggingface.co/westronai/translation-en-pt)
 
 ## Características do Modelo
 
@@ -21,7 +21,7 @@ Este é um modelo de tradução automática para tradução de inglês (en) para
 - **Linguagem de origem:** Inglês (en)
 - **Linguagem alvo:** Português (pt)
 - **Tokenização:** SentencePiece
-- **Dados de finetuning:** Dados da Revista FAPESP e Documentações Técnicas
+- **Dados de fine-tuning:** Dados da Revista FAPESP e Documentações Técnicas
 
 ## Como Usar
 
@@ -48,7 +48,7 @@ for t in translated:
 ## Resultados
 Essa tabela mostra as diferenças entre o modelo original e o modelo com fine-tuning, evidenciando as melhorias em termos de adequação técnica nas traduções.
 
-| Sentença Original                                                   | Modelo Original                                                    | Modelo com Fine-Tuning                                             |
+| Sentença                                                    | Tradução Modelo Original                                                    | Tradução Modelo com Fine-Tuning                                             |
 |---------------------------------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------------|
 | A bus is a communication system that transfers data between components | Um ônibus é um sistema de comunicação que transfere dados entre componentes | Um barramento é um sistema de comunicação que transfere dados entre componentes |
 | The database host is experiencing issues                            | O anfitrião do banco de dados está enfrentando problemas             | O host do banco de dados está enfrentando problemas                |
@@ -92,6 +92,3 @@ YEAR={2011},
 }
 
 =======
-# translation-en-pt
-Modelo de Tradução Especializado em Tradução de Documentação Técnica
->>>>>>> ce7ebd02a52c827d061a53964492481bfc628dbe
