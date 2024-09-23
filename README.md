@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Modelo de Tradução Especializado em Documentações Técnicas (en-pt)
 
@@ -92,3 +93,7 @@ YEAR={2011},
     pages = "1174--1182",
 }
 
+=======
+# translation-en-pt
+Modelo de Tradução Especializado em Tradução de Documentação Técnica
+>>>>>>> ce7ebd02a52c827d061a53964492481bfc628dbe
