@@ -6,7 +6,7 @@
 
 ## Sobre 
 
-Este é um modelo de tradução automática para tradução de inglês (en) para português (pt),   **fine-tuned** com dados da **Revista FAPESP** e **documentações técnicas de diversas fontes**. Os dados da FAPESP foram obtidos de [FAPESP Corpora](http://www.nilc.icmc.usp.br/nilc/tools/Fapesp%20Corpora.htm). Os dados de documentações técnicas, abrangendo mais de 10 mil páginas, foram coletados pelo autor em conformidade com as diretrizes específicas de cada fonte.
+Este é um modelo de tradução automática para tradução de inglês (en) para português (pt),   **fine-tuned** com dados da **Revista FAPESP** e **documentações técnicas de diversas fontes**. Os dados da FAPESP foram obtidos da seguinte fonte: [FAPESP Corpora](http://www.nilc.icmc.usp.br/nilc/tools/Fapesp%20Corpora.htm). Os dados de documentações técnicas, foram coletados pelo autor em conformidade com as diretrizes específicas de cada fonte.
 
 ## Modelo Original
 
