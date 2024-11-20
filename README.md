@@ -1,4 +1,4 @@
-# Modelo de Tradução Especializado em Documentações Técnicas (en-pt)
+# Modelo de Tradução Adaptado ao Domínio de Documentações Técnicas de Tecnologia (en-pt)
 
 ## ⚠️ Aviso
 
@@ -6,13 +6,17 @@
 
 ## Sobre 
 
-Este é um modelo de tradução automática para tradução de inglês (en) para português (pt),   **fine-tuned** com dados da **Revista FAPESP** e **documentações técnicas de diversas fontes**. Os dados da FAPESP foram obtidos da seguinte fonte: [FAPESP Corpora](http://www.nilc.icmc.usp.br/nilc/tools/Fapesp%20Corpora.htm). Os dados de documentações técnicas, foram coletados pelo autor em conformidade com as diretrizes específicas de cada fonte.
+A técnica de _mixed fine-tuning_ foi aplicada, conforme descrito no artigo [An Empirical Comparison of Domain Adaptation Methods for Neural Machine Translation](https://aclanthology.org/P17-2061) (Chu et al., ACL 2017)
+
+O _mixed fine-tuning_ foi realizado com dados da **Revista FAPESP** e **documentações técnicas de diversas fontes**. Os dados da FAPESP foram obtidos da seguinte fonte: [FAPESP Corpora](http://www.nilc.icmc.usp.br/nilc/tools/Fapesp%20Corpora.htm) (Aziz & Specia, 2011). Os dados de documentações técnicas, foram coletados e compilados pelo autor em conformidade com as diretrizes específicas de cada fonte.
+
+
 
 ## Modelo Original
 
 [Helsinki-NLP/opus-mt-tc-big-en-pt](https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-pt)
 
-## Modelo Fine-tuned Especializado em Documentações Técnicas
+## Modelo Adaptado ao Domínio de Documentações Técnicas
 [westronai/translation-en-pt](https://huggingface.co/westronai/translation-en-pt)
 
 ## Características do Modelo
@@ -21,7 +25,7 @@ Este é um modelo de tradução automática para tradução de inglês (en) para
 - **Linguagem de origem:** Inglês (en)
 - **Linguagem alvo:** Português (pt)
 - **Tokenização:** SentencePiece
-- **Dados de fine-tuning:** Dados da Revista FAPESP e Documentações Técnicas
+- **Dados de _fine-tuning_:** Dados da Revista FAPESP e Documentações Técnicas
 
 ## Como Usar
 
@@ -48,47 +52,28 @@ for t in translated:
 ## Resultados
 Essa tabela mostra as diferenças entre o modelo original e o modelo com fine-tuning, evidenciando as melhorias em termos de adequação técnica nas traduções.
 
-| Sentença                                                    | Tradução Modelo Original                                                    | Tradução Modelo com Fine-Tuning                                             |
+| Sentença                                                    | Tradução Modelo Original                                                    | Tradução Modelo Adaptado                                          |
 |---------------------------------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------------|
 | A bus is a communication system that transfers data between components | Um ônibus é um sistema de comunicação que transfere dados entre componentes | Um barramento é um sistema de comunicação que transfere dados entre componentes |
 | The database host is experiencing issues                            | O anfitrião do banco de dados está enfrentando problemas             | O host do banco de dados está enfrentando problemas                |
-| The table is under a lock during the operation                      | A mesa está sob um bloqueio durante a operação                      | A tabela está sob bloqueio durante a operação                      |
+| In Git, a branch is a new/separate version of the main repository. | No Git, um ramo é uma versão nova/separada do repositório principal.                     | No Git, um branch é uma versão nova/separada do repositório principal.|
+| Asynchronous programming models, such as Promises and async/await, improve the efficiency of I/O operations | Modelos de programação assíncronos, como Promessas e assíncronas/despertar, melhoram a eficiência das operações de E/S | Modelos de programação assíncrona, como Promises e async/await, melhoram a eficiência das operações de E/S
 
-## Referência
 
-```bibtex
-@INPROCEEDINGS{aziz:2011:newfapesp,
-AUTHOR={Wilker Aziz and Lucia Specia},
-TITLE={Fully Automatic Compilation of a {Portuguese-English} Parallel Corpus for Statistical Machine Translation},
-BOOKTITLE={STIL 2011},
-ADDRESS={Cuiab\'a, MT},
-DAYS={24-26},
-MONTH={October},
-YEAR={2011},
-}
 
-@inproceedings{tiedemann-thottingal-2020-opus,
-    title = "{OPUS}-{MT} {--} Building open translation services for the World",
-    author = {Tiedemann, J{\"o}rg  and Thottingal, Santhosh},
-    booktitle = "Proceedings of the 22nd Annual Conference of the European Association for Machine Translation",
-    month = nov,
-    year = "2020",
-    address = "Lisboa, Portugal",
-    publisher = "European Association for Machine Translation",
-    url = "https://aclanthology.org/2020.eamt-1.61",
-    pages = "479--480",
-}
 
-@inproceedings{tiedemann-2020-tatoeba,
-    title = "The Tatoeba Translation Challenge {--} Realistic Data Sets for Low Resource and Multilingual {MT}",
-    author = {Tiedemann, J{\"o}rg},
-    booktitle = "Proceedings of the Fifth Conference on Machine Translation",
-    month = nov,
-    year = "2020",
-    address = "Online",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2020.wmt-1.139",
-    pages = "1174--1182",
-}
 
-=======
+## Métricas
+
+A análise métrica foi realizada utilizando um conjunto de 10.000 sentenças, composto igualmente por documentações técnicas e textos da revista FAPESP, extraídas do conjunto de testes.
+
+
+| Ferramenta | BLEU  | METEOR | chrF   |
+|------------|-------|--------|--------|
+| Modelo Original | 0.571 | 0.771  | 76.816 |
+| Modelo Adaptado | 0.651 | 0.812  | 81.644 |
+
+
+
+
+
